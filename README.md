@@ -5,7 +5,7 @@ Run using: ```python -m http.server```
 index page most worked on
 
 
-<p align="center">
+<p align="left">
   <img src="https://github.com/user-attachments/assets/0ddc1cd3-f000-4965-9daf-dad430c1bc06" alt="Book Recommender" width="300"/>
 </p>
 
