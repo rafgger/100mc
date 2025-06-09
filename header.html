@@ -41,14 +41,40 @@
 </div>
 </div>
 </div>
-  </header>
-  <style>
+  </header>  <style>
   #main-navbar {
     line-height: 1;
-    height: 60px; /* Set a fixed height for the navbar */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    min-height: 60px; /* Minimum height for navbar */
+    padding: 8px 16px; /* Add some padding */
+    margin: 0;
     display: flex;
-    align-items: center; /* Center content vertically */
+    align-items: flex-start; /* Align to top when expanded */
+    flex-wrap: wrap; /* Allow wrapping for mobile menu */
+  }
+
+  /* Ensure navbar container can expand */
+  #main-navbar .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* Mobile navbar expansion */
+  @media (max-width: 575.98px) {
+    #main-navbar {
+      height: auto; /* Allow height to expand on mobile */
+      align-items: stretch;
+    }
+    
+    .navbar-collapse {
+      width: 100%;
+      margin-top: 10px;
+    }
+    
+    .navbar-nav {
+      width: 100%;
+    }
   }
   </style>
