@@ -59,3 +59,83 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 .more-link {
 	display: block;
 }
+
+
+
+/* Add styles for the navbar in mobile view */
+.navbar {
+    padding: 1rem;
+    background: #f8f8f8; /* Very light grey background */
+    box-shadow: 0 2px 4px rgba(107, 104, 104, 0.479);
+    position: sticky;
+    top: 243px; /* Adjust this value to match the height of the image */
+    z-index: 1000;
+    border-radius: 10px; /* Add rounded corners to the navbar */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #5c5c5c;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu-items {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-items.active {
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .nav-link {
+        margin: 16px 0;
+        font-size: 1.2rem;
+        display: block;
+    }
+}
