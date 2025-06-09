@@ -60,15 +60,17 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
 	display: block;
 }
 
+
+
 /* Add styles for the navbar in mobile view */
 .navbar {
     padding: 1rem;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
+    background: #f8f8f8; /* Very light grey background */
+    box-shadow: 0 2px 4px rgba(107, 104, 104, 0.479);
+    position: sticky;
+    top: 243px; /* Adjust this value to match the height of the image */
     z-index: 1000;
+    border-radius: 10px; /* Add rounded corners to the navbar */
 }
 
 .nav-menu {
@@ -94,7 +96,7 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: #333;
+    background-color: #5c5c5c;
 }
 
 @media (max-width: 768px) {
@@ -120,7 +122,6 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: #fff;
         width: 100%;
         text-align: center;
         transition: 0.3s;
